@@ -29,5 +29,21 @@ def kopejaisValstuSkaits(atbildeDict):
     print(f"Kopā ir dati par {skaits} valstīm")
     return skaits
 
-visparpienemtasValstis(atbildeDict)
-kopejaisValstuSkaits(atbildeDict)
+#5. Iegūsti un izvadi visu valstu vidējo iedzīvotāju skaitu (“population”)
+# def iedzivotajuSkaits(atbildeDict):
+#     for valsts in atbildeDict:
+#         print(f"{valsts['name']['common']} population: {valsts["population"]}")
+
+#vai
+
+def iedzivotajuSkaits(atbildeDict):
+    kopejaisValstuSkaits = 0
+    kopejaisValstuSkaits = len(atbildeDict)
+    for valsts in atbildeDict:
+        print(f"{valsts['name']['common']} population: {valsts["population"]}")
+        kopejaisIedzivotajuSkaits += valsts{"population"}
+        print(kopejaisValstuSkaits)
+
+# visparpienemtasValstis(atbildeDict)
+# kopejaisValstuSkaits(atbildeDict)
+iedzivotajuSkaits(atbildeDict)
