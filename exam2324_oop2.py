@@ -41,9 +41,37 @@ def iedzivotajuSkaits(atbildeDict):
     kopejaisValstuSkaits = len(atbildeDict)
     for valsts in atbildeDict:
         print(f"{valsts['name']['common']} population: {valsts["population"]}")
-        kopejaisIedzivotajuSkaits += valsts{"population"}
+        kopejaisIedzivotajuSkaits += valsts["population"]
         print(kopejaisValstuSkaits)
+
+#6. Iegūsti un izvadi valsti ar vislielāko iedzīvotāju skaitu. 
+def lielakaisIedzivotajuSkaits(atbildeDict):
+    sak=sorted(atbildeDict, key=lambda elem:elem["population"])
+    print("Izskatās, ka visvairāk ir:")
+    print(sak[-1]['name']['common'])
+
+#7. Iegūsti un izvadi visu valstu kopējo platību (“area”)
+def kopejaPlatiba(atbildeDict):
+    kopejaPlatiba = 0
+    for valsts in atbildeDict:
+        print(f"{valsts['name']['common'] }population: {valsts["population"]}")
+        kopejaPlatiba += valsts["area"]
+    print(f"Kopējā visu valstu platība:{kopejaPlatiba}")
+    return kopejaPlatiba
+
+#8. Iegūsti un izvadi informāciju par Latvijas: subregion un borders
+def subAndBorders(atbildeDict):
+    for valsts in atbildeDict:
+        if valsts['name']['common'] != "Latvia":
+            continue
+        print(valsts['name']['common'])
+        print(valsts["borders"])
+
+
 
 # visparpienemtasValstis(atbildeDict)
 # kopejaisValstuSkaits(atbildeDict)
-iedzivotajuSkaits(atbildeDict)
+#iedzivotajuSkaits(atbildeDict)
+#lielakaisIedzivotajuSkaits(atbildeDict)
+#kopejaPlatiba(atbildeDict)
+subAndBorders(atbildeDict)
