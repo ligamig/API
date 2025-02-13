@@ -1,5 +1,10 @@
 #4. daļa
 #1. uzdevums
+
+#csvfile = open('agenti.csv', newline='', encoding='utf-8') as csvfile:
+#   spamreader = csv.reader(csvfile, delimiter=';', quotechar='|')
+#   csvfile.close()   ---- OBLIGATI jacloseo
+
 import csv
 with open('agenti.csv', newline='', encoding='utf-8') as csvfile:
     spamreader = csv.reader(csvfile, delimiter=';', quotechar='|')
