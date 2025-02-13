@@ -20,7 +20,14 @@ def visparpienemtasValstis(atbildeDict):
     for valsts in atbildeDict:
         print(valsts['name']['common'])
 
-visparpienemtasValstis(atbildeDict)
+#visparpienemtasValstis(atbildeDict)
 #print(atbildeDict[0]['name']['common']) #izprinte pasu pirmo ierakstu
 
 #4. kopejais valsts skaits
+def kopejaisValstuSkaits(atbildeDict):
+    skaits = len(atbildeDict)
+    print(f"Kopā ir dati par {skaits} valstīm")
+    return skaits
+
+visparpienemtasValstis(atbildeDict)
+kopejaisValstuSkaits(atbildeDict)
